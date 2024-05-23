@@ -1,0 +1,265 @@
+body {
+    font-family: 'Arial, sans-serif';
+    margin: 0;
+    padding: 0;
+    background-color: rgb(254, 238, 227);
+    color: #333;
+    justify-content: center;
+    /* centering content horizontally */
+}
+
+/* Nav Bar */
+body nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 5%;
+    align-items: center;
+    background: #233c5b;
+    width: 93%;
+    /* ensure nav bar fits the screen width */
+}
+
+.text,
+.logo {
+    color: #FFF;
+    font-size: 22px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #8291A5;
+    padding: 8px 40px;
+    border-radius: 15px;
+    transition: all .3s ease;
+}
+
+ul li a:hover,
+ul li a.active {
+    color: #FFF;
+    background: #0075FF;
+}
+
+/* hamburger icon for mobile nav */
+#icon {
+    background-color: #0075FF;
+    padding: 5px 7px 3px 7px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#icon svg {
+    color: #FFF;
+    height: 28px;
+    transition: all .3s ease;
+}
+
+#icon:hover {
+    background: #FFF;
+}
+
+#icon:hover svg {
+    color: #0075FF;
+}
+
+#checkbox,
+#icon {
+    display: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: rgb(55, 57, 126);
+    text-align: center;
+}
+
+.zxc {
+    margin-bottom: 2em;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-text {
+    text-align: center;
+}
+
+.profile-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* responsive styles for mobile */
+@media screen and (max-width: 768px) {
+    nav {
+        border-bottom: 1px solid #455468;
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 71px);
+        background-color: #18283B;
+        left: 0;
+        top: 0;
+        text-align: center;
+        display: none;
+        margin-top: 71px;
+        padding: 0;
+    }
+
+    ul li {
+        display: block;
+        padding: 10px 15px;
+    }
+
+    ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    #icon {
+        display: block;
+    }
+
+    #checkbox:checked~ul {
+        display: block;
+    }
+}
+
+/* General CSS for content-type-2 */
+.content-type-2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+    /* ensure content doesn't exceed viewport width */
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.content-type-2-sub {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin-top: 30px;
+}
+
+/* image container within content type 2 */
+.content-type-2-image {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-right: 25px;
+    flex: 0 0 35%;
+    /* image width */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* text styles within content type 2 */
+.content-type-2-text {
+    font-family: Helvetica, Arial, sans-serif;
+    flex: 1;
+    margin: 0;
+    align-items: center;
+    font-size: 1.38em;
+    line-height: 1.5;
+    padding-left: 35px;
+    flex-direction: column;
+    color: rgb(55, 57, 126);
+}
+
+.content-type-2-title {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: left;
+    color: rgb(55, 57, 126);
+}
+
+/* empty title container within content type 2 */
+.content-type-2-title-empty {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex: 0 0 35%;
+}
+
+/* main title within content type 2 */
+.content-type-2-title-main {
+    font-family: Helvetica, Arial, sans-serif;
+    flex: 1;
+    display: flex;
+    align-items: left;
+    font-size: 1.38em;
+    line-height: 1.5;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* carousel for content type 2 */
+.content-type-2-carousel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.content-type-2-carousel img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+    object-fit: cover;
+}
+
+.content-type-2-carousel img.active {
+    opacity: 1;
+}
+
+/* override for text in content type 2 */
+.content-type-2-text {
+    flex: 2;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.8em;
+}
